@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElfBeautyBreweryAPI", "ElfBeautyBreweryAPI\ElfBeautyBreweryAPI.csproj", "{365EE0F7-3088-46AF-AD7D-0D39DCABD7F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogics", "BusinessLogics", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{269843B1-A6F5-4E43-944D-BE36307B65AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessEntities", "BusinessEntities", "{5181636D-B853-49C2-B3AD-2F9C178D5275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogics", "BusinessLogic\BusinessLogics.csproj", "{2E43E8F8-DF51-4E1A-B13A-24F847277F54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{A53ADD47-8D34-4BDB-A75D-F1DCCED0AE4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessEntities", "BusinessEntities\BusinessEntities.csproj", "{D6FAC278-708F-4AB5-8529-2322EFE0622C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfrastructureCommon", "InfrastructureCommon", "{8C3F99FB-142B-4A5B-8D90-36832FC53DA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureCommon", "InfrastructureCommon\InfrastructureCommon.csproj", "{4FF9B7D6-1DBE-42A2-9DA7-0ABE214DD193}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{365EE0F7-3088-46AF-AD7D-0D39DCABD7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365EE0F7-3088-46AF-AD7D-0D39DCABD7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365EE0F7-3088-46AF-AD7D-0D39DCABD7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365EE0F7-3088-46AF-AD7D-0D39DCABD7F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E43E8F8-DF51-4E1A-B13A-24F847277F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E43E8F8-DF51-4E1A-B13A-24F847277F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E43E8F8-DF51-4E1A-B13A-24F847277F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E43E8F8-DF51-4E1A-B13A-24F847277F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53ADD47-8D34-4BDB-A75D-F1DCCED0AE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53ADD47-8D34-4BDB-A75D-F1DCCED0AE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53ADD47-8D34-4BDB-A75D-F1DCCED0AE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53ADD47-8D34-4BDB-A75D-F1DCCED0AE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FAC278-708F-4AB5-8529-2322EFE0622C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FAC278-708F-4AB5-8529-2322EFE0622C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FAC278-708F-4AB5-8529-2322EFE0622C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FAC278-708F-4AB5-8529-2322EFE0622C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF9B7D6-1DBE-42A2-9DA7-0ABE214DD193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF9B7D6-1DBE-42A2-9DA7-0ABE214DD193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF9B7D6-1DBE-42A2-9DA7-0ABE214DD193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF9B7D6-1DBE-42A2-9DA7-0ABE214DD193}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E43E8F8-DF51-4E1A-B13A-24F847277F54} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A53ADD47-8D34-4BDB-A75D-F1DCCED0AE4C} = {269843B1-A6F5-4E43-944D-BE36307B65AC}
+		{D6FAC278-708F-4AB5-8529-2322EFE0622C} = {5181636D-B853-49C2-B3AD-2F9C178D5275}
+		{4FF9B7D6-1DBE-42A2-9DA7-0ABE214DD193} = {8C3F99FB-142B-4A5B-8D90-36832FC53DA1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E76710E9-EC5D-45F5-836B-0A12DE7C1BE9}
+	EndGlobalSection
+EndGlobal
