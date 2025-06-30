@@ -19,6 +19,10 @@ namespace BusinessLogics.Manager
             _memoryCache = memoryCache;
         }
 
+        /// <summary>
+        /// Retrieves a list of all breweries.
+        /// </summary>
+        /// <returns>A list of BreweryBusinessModel.</returns>
         public async Task<List<BreweryBusinessModel>> GetAllBreweriesList()
         {
 
@@ -40,6 +44,10 @@ namespace BusinessLogics.Manager
             return null;
         }
 
+        /// <summary>
+        ///Search from Breweries list
+        /// </summary>
+        /// <returns>matched records and sorting result based on sort column</returns>
         public async Task<List<BreweryBusinessModel>> SearchBreweries(BreweriesSearchRequestModel searchRequestModel)
         {
 
@@ -50,6 +58,7 @@ namespace BusinessLogics.Manager
             {
                 var search = searchRequestModel.search.ToLower();
                 response = await Search(search, response);
+
 
                 //case if we want to use direct brewery search API
 
@@ -78,6 +87,11 @@ namespace BusinessLogics.Manager
 
         }
 
+        /// <summary>
+        /// find the matched data from serach string, used for autocomplete drop down
+        /// </summary>
+        /// <param></param>
+        /// <returns>Return Breweries List</returns>
         public async Task<List<BreweryBusinessModel>> AutocompleteBreweries(string search)
         {
             List<BreweryBusinessModel> breweriesList = await GetAllBreweriesList();
@@ -90,6 +104,9 @@ namespace BusinessLogics.Manager
             return response;
         }
 
+        /// <summary>
+        /// private common method for brewery third party api call
+        /// </summary>
         private async Task<HttpResponseMessage> CallApi(string Url)
         {
             string BaseURL = ConstantClass.breweryBaseURL;
@@ -98,6 +115,9 @@ namespace BusinessLogics.Manager
             return response;
         }
 
+        /// <summary>
+        /// Search common method from brewery list
+        /// </summary>
         private async Task<List<BreweryBusinessModel>> Search(string searchString, List<BreweryBusinessModel> breweries)
         {
             var response = breweries.Where(b =>

@@ -23,6 +23,11 @@ namespace ElfBeautyBreweryAPI.Controllers
 
         #region Method
 
+        /// <summary>
+        /// Provide all Breweries List
+        /// </summary>
+        /// <param></param>
+        /// <returns>Return Breweries List</returns>
         [HttpGet("GetAll")]
         [Authorize]
         public async Task<IActionResult> GetAll()
@@ -31,8 +36,12 @@ namespace ElfBeautyBreweryAPI.Controllers
             return Ok(response);
         }
 
-        
 
+        /// <summary>
+        /// Search from Breweries List along with sorted column and order
+        /// </summary>
+        /// <param></param>
+        /// <returns>Return Breweries List</returns>
         [HttpPost("Search")]
         [Authorize]
         public async Task<IActionResult> Search([FromBody] BreweriesSearchRequestModel searchRequestModel)
@@ -41,6 +50,11 @@ namespace ElfBeautyBreweryAPI.Controllers
             return Ok(breweries);
         }
 
+        /// <summary>
+        /// find the matched data from serach string, used for autocomplete drop down
+        /// </summary>
+        /// <param></param>
+        /// <returns>Return Breweries List</returns>
         [HttpGet("Autocomplete")]
         [Authorize]
         public async Task<IActionResult> Autocomplete([FromQuery] string search)

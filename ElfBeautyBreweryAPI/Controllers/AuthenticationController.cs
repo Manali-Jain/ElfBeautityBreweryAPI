@@ -6,6 +6,9 @@ using System.Text;
 
 namespace ElfBeautyBreweryAPI.Controllers
 {
+    [ApiController]
+    [Route("v{apiVersion:apiVersion}/api/[controller]")]
+    [ApiVersion("1.0")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IConfiguration _config;
@@ -18,6 +21,12 @@ namespace ElfBeautyBreweryAPI.Controllers
         #endregion
 
         #region Method
+
+        /// <summary>
+        /// Authenticates the user and returns a token if the credentials are valid
+        /// </summary>
+        /// <param name="login">Login credentials including username and password</param>
+        /// <returns>Token or invalid credentials</returns>
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequestModel login)
         {
@@ -29,6 +38,10 @@ namespace ElfBeautyBreweryAPI.Controllers
             return Unauthorized("Invalid credentials");
         }
 
+
+        /// <summary>
+        /// Generate JWT token
+        /// </summary>
         private string GenerateToken(string username)
         {
             var jwtSettings = _config.GetSection("JwtSettings");
