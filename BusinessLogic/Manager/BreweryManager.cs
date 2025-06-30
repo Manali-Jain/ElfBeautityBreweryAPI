@@ -40,18 +40,6 @@ namespace BusinessLogics.Manager
             return null;
         }
 
-        public async Task<List<BreweryBusinessModel>> AutocompleteBreweries(string search)
-        {
-            List<BreweryBusinessModel> breweriesList = await GetAllBreweriesList();
-            List<BreweryBusinessModel> response = breweriesList;
-            //throw new Exception();
-            if (!string.IsNullOrEmpty(search))
-            {
-                response = await Search(search, breweriesList);
-            }
-            return breweriesList;
-        }
-
         public async Task<List<BreweryBusinessModel>> SearchBreweries(BreweriesSearchRequestModel searchRequestModel)
         {
 
@@ -90,6 +78,17 @@ namespace BusinessLogics.Manager
 
         }
 
+        public async Task<List<BreweryBusinessModel>> AutocompleteBreweries(string search)
+        {
+            List<BreweryBusinessModel> breweriesList = await GetAllBreweriesList();
+            List<BreweryBusinessModel> response = breweriesList;
+            //throw new Exception();
+            if (!string.IsNullOrEmpty(search))
+            {
+                response = await Search(search, breweriesList);
+            }
+            return response;
+        }
 
         private async Task<HttpResponseMessage> CallApi(string Url)
         {

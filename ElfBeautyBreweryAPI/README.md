@@ -21,7 +21,7 @@ c.	Implement Dependency Injection
 	
 d.	API should allow for sorting by brewery name, distance and city
 	-> Brewery/Search httpPost method have requestModel where we can pass the sorting column and direction "asc","desc"
-	-> Check distance
+	
 	
 e.	API should allow for search functionality
 	-> Brewery/Search httpPost method have requestModel where we can pass search string on any field
@@ -35,10 +35,10 @@ g.	Cache results for 10 minutes (IE: only make the call to the source API every 
 	
 h.	Architecture should implement SOLID principles
 	-> S: Single responsibility : 2 controller is created one for brewery and one for Authentication and each have it's own signle resposibility
-	   O: Open/Closed principle : for example with the brewery manager search method is closed for change and open modification, here this method is used on 2 different methods and handled response own way 
+	   O: Open/Closed principle : for example with the brecwery manager search method is closed for change and open modification, here this method is used on 2 different methods and handled response own way 
 	   L: Liskov substituion : 
 	   I: Interface segregation priciple : break down the interface to smaller, so they don't force to implement the method
-	   D: Dependency inversion : 
+	   D: Dependency inversion : brewery manager is depends on IbreweryManager Interface
 	
 i.	Add error handling
 	-> ErrorHandling Middleware is created and added to program file of API project
